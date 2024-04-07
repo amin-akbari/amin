@@ -1,0 +1,67 @@
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Random Quote Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <form action="#">
+        <div class="form-group">
+            <label for="rate">Rate</label>
+            <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+            <div id="rateValue">1</div>
+        </div>
+        <div class="form-group">
+            <label for="pitch">Pitch</label>
+            <input type="range" id="pitch" min="0" max="2" value="1" step="0.1">
+            <div id="pitchValue">1</div>
+        </div>
+        <div class="form-group">
+            <select id="voiceSelect" ></select>
+        </div>
+        <!-- <button class="change-voice-btn">Submit Changes</button> -->
+    </form>
+    <div class="wrapper">
+        <header>Quote of the Day</header>
+        <div class="content">
+            <div class="quote-area">
+                <i class="fas fa-quote-left"></i>
+                <p class="quote">Never give up because you never know if the next try is going to be the one that works.
+                </p>
+                <i class="fas fa-quote-right"></i>
+            </div>
+            <div class="author">
+                <span>__</span>
+                <span class="name">Mary Kay Ash</span>
+                
+                
+            </div>
+        </div>
+        <div class="author-btn-and-bio-holder"> 
+            <button id="bioOfAuthorBtn">Get Bio Of This Author</button>
+            <p  id="bioContent" class="hide-bio-author">Mary Kay Ash (born Mary Kathlyn Wagner; May 12, 1918, – November 22, 2001) was an American businesswoman and founder of Mary Kay Cosmetics, Inc. At her death, she had a fortune of $98 million, and her company had more than $1.2 billion in sales with a sales force of more than 800,000 in at least three dozen countries.</p>
+           <a href="https://en.wikipedia.org/wiki/Mary_Kay_Ash" target="_blank" id="wikiPediaAnchorTag"> <button id="goToWikiBtn" class="hide-wiki-btn">Go to authors Wikipedia</button></a>
+        </div>
+        <div class="buttons">
+            <div class="features">
+                <ul>
+                    
+                    <li class="copy"><i class="fas fa-copy"></i></li>
+                    <li class="twitter"><i class="fab fa-twitter"></i></li>
+                    <li class="speech"><i class="fas fa-volume-up"></i></li>
+                </ul>
+                <button id="new-qoute">New Quote</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js" type="module"></script>
+    <script src="./speechsynthesis.js" type="module"></script>
+
+</body>
+
+</html>
